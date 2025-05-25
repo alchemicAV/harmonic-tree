@@ -875,7 +875,7 @@ const HarmonicFrequencyExplorer = () => {
 	const [recursionLevel, setRecursionLevel] = useState(1);
 	const [nHarmonics, setNHarmonics] = useState(8);
 	const [mode, setMode] = useState("harmonic");
-	const [threshold, setThreshold] = useState(0.01);
+	const [threshold, setThreshold] = useState(0.05);
 	const [maxDenominator, setMaxDenominator] = useState(12);
 	const [harmonicStructure, setHarmonicStructure] = useState(null);
 	const [closePairs, setClosePairs] = useState([]);
@@ -1046,9 +1046,9 @@ const HarmonicFrequencyExplorer = () => {
 							type="number"
 							value={threshold}
 							onChange={(e) => setThreshold(parseFloat(e.target.value))}
-							step="0.001"
-							min="0.0001"
-							max="0.1"
+							step="0.01"
+							min="0.01"
+							max="0.2"
 						/>
 					</div>
 					
